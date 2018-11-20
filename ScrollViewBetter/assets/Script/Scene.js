@@ -45,14 +45,26 @@ cc.Class({
     onBtnClk: function (event, param) {
         switch (param) {
             case 'normal':
+                if (!!this.dialog1 && this.dialog1.isValid) {
+                    return;
+                }
+
                 let dialog1 = cc.instantiate(this.scrollView);
                 dialog1.parent = this.node;
                 dialog1.getComponent('SV').createList(this.data);
+
+                this.dialog1 = dialog1;
                 break;
             case 'better':
+                if (!!this.dialog2 && this.dialog2.isValid) {
+                    return;
+                }
+
                 let dialog2 = cc.instantiate(this.scrollViewBetter);
                 dialog2.parent = this.node;
                 dialog2.getComponent('SVBetter').createList(this.data);
+
+                this.dialog2 = dialog2;
                 break;
         }
     }
