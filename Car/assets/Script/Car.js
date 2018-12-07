@@ -10,7 +10,9 @@ cc.Class({
         tireGroup: cc.Node,
         tireStreak: cc.Prefab,
         posTireLeft: cc.Node,
-        posTireRight: cc.Node
+        posTireRight: cc.Node,
+
+        cameraNode: cc.Node
     },
 
     // use this for initialization
@@ -69,6 +71,9 @@ cc.Class({
         this.carHead.rotation = cc.radiansToDegrees(cc.pAngleSigned(cc.pSub(this.carHead.position, this.carTail.position), cc.p(0, 1)));
         this.line.rotation = cc.radiansToDegrees(cc.pAngleSigned(cc.pSub(this.carControl.position, this.carHead.position), cc.p(1, 0)));
         this.updateTireStreak();
+
+        // this.cameraNode.position = this.carHead.position;
+
         // this.carTail.getComponent(cc.MotionStreak)._onNodePositionChanged();
     },
 });
