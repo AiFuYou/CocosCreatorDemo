@@ -12,5 +12,5 @@
 
 ### Shader——Space（星空）
 
-基于creator的1.9.3版本，目前在手机上的显示效果还有问题
-博客地址：
+基于creator的1.9.3版本，目前在手机上的显示效果还有问题。
+博客地址：https://www.ifeelgame.net/cocoscreator/shader-space%EF%BC%88%E6%98%9F%E7%A9%BA%EF%BC%89/
